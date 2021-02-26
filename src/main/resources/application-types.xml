@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="asd" format="json">
+      <types:shape format="weave" example="examples/asd-1.json"><![CDATA[%dw 2.0
+
+type asd = {| message: String |} {"example": "{\\\"message\\\":\\\"Hello World\\\"}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#f02db937-9219-4438-95b5-b29cac82b4ed">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="asd"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
