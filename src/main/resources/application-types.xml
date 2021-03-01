@@ -9,13 +9,5 @@ type asd = {| message: String |} {"example": "{\\\"message\\\":\\\"Hello World\\
 ]]></types:shape>
     </types:type>
   </types:catalog>
-  <types:enrichment select="#f02db937-9219-4438-95b5-b29cac82b4ed">
-    <types:processor-declaration>
-      <types:input-event>
-        <types:message>
-          <types:payload type="asd"/>
-        </types:message>
-      </types:input-event>
-    </types:processor-declaration>
-  </types:enrichment>
+  <types:enrichment select="#f02db937-9219-4438-95b5-b29cac82b4ed"/>
 </types:mule>
